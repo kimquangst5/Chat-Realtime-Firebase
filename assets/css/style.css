@@ -1,0 +1,264 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+}
+
+emoji-picker {
+	width: 100%;
+	height: 300px;
+}
+
+.chat-app {
+	width: 500px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* header */
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.header .inner-logo a {
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	color: black;
+}
+
+.header .inner-logo a:hover {
+	color: blue;
+}
+
+.header .inner-actions a {
+	color: black;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 14px;
+	padding: 5px 12px;
+	border-radius: 8px;
+}
+
+.header .inner-actions a:hover {
+	color: red;
+}
+
+/* End header */
+
+/* chat */
+.chat {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
+
+.chat .inner-body {
+	padding: 10px;
+}
+
+.chat .inner-name {
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.chat .inner-content {
+	background: #F1F1F1;
+	margin-bottom: 10px;
+	max-width: 200px;
+	padding: 5px 10px;
+	border-radius: 15px;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.chat .inner-outgoing {
+	position: relative;
+}
+
+.chat .inner-outgoing .button-delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: red;
+	color: white;
+	border: 0;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+}
+
+.chat .inner-outgoing:hover .button-delete {
+	display: inline-block;
+}
+
+.chat .inner-outgoing .inner-content {
+	margin-left: auto;
+	background: #FE5DA3;
+	color: #fff;
+}
+
+.chat .inner-foot {
+	border-top: 1px solid #ddd;
+	padding: 10px;
+}
+
+.chat .inner-form {
+	display: flex;
+}
+
+.chat .inner-form input {
+	flex: 1;
+	height: 25px;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	padding: 0 10px;
+	outline: none;
+}
+
+.chat .inner-form button {
+	border-radius: 15px;
+	border: 1px solid #FE5DA3;
+	background: #FE5DA3;
+	color: #fff;
+	height: 25px;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.button-icon,
+.button-image {
+	border-radius: 15px;
+	border: 1px solid #FE5DA3;
+	background: white;
+	color: #FE5DA3;
+	height: 25px;
+	padding: 0 4px;
+	cursor: pointer;
+	margin: 0 4px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-image {
+	margin-left: 0;
+}
+
+.tooltip:not(.shown) {
+	display: none;
+}
+
+.chat .inner-foot {
+	position: relative;
+}
+
+.chat .inner-foot .tooltip {
+	position: absolute;
+	right: 30px !important;
+	left: auto !important;
+	bottom: 40px !important;
+	top: auto !important;
+	transform: translate3d(0px, 0px, 0px) !important;
+}
+
+.chat .inner-foot .inner-preview-images .label-container {
+	display: none;
+}
+
+.chat .inner-foot .inner-preview-images .input-container {
+	display: none;
+}
+
+.chat .inner-foot .inner-preview-images .image-preview {
+	height: auto;
+	padding: 0;
+}
+
+.chat .inner-foot .inner-preview-images .image-preview-item {
+	width: 90px;
+	background-size: contain;
+}
+
+.chat .inner-images {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.chat .inner-outgoing .inner-images {
+	justify-content: flex-end;
+}
+
+.chat .inner-images img {
+	width: 80px;
+	aspect-ratio: 1/1;
+	object-fit: contain;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 10px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+/* End chat */
+
+/* Form */
+.form {
+	background: #f3f3f3;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.form__group {
+	margin-bottom: 20px;
+}
+
+.form__group label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.form__group input {
+	width: 100%;
+	height: 42px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	outline: 0;
+	padding: 0 15px;
+}
+
+.form__button {
+	width: 100%;
+	padding: 15px;
+	font-size: 15px;
+	font-weight: 600;
+	border: 0;
+	border-radius: 8px;
+	background: orange;
+	cursor: pointer;
+}
+
+/* End Form */
+
+/* buttons */
+.header .inner-actions [button-login],
+.header .inner-actions [button-register],
+.header .inner-actions [button-logout],
+.chat {
+	display: none;
+}
+
+/* End buttons */
